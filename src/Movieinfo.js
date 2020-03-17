@@ -35,7 +35,7 @@ const MovieInfo = (props) => {
 							<p>	Votos : {props.currentMovie.vote_count}</p>
 							<p>	Popularidad : {props.currentMovie.popularity}</p>
 							<p>	Nota: {props.currentMovie.vote_average}</p>
-							<a href="#" onClick={() => save_as(props)}> Añadir a favoritos </a>
+							<a href="/#" onClick={() => save_as(props)}> Añadir a favoritos </a>
 						</div>
 					</div>
 					

@@ -1,7 +1,5 @@
 import React from 'react';
 import './stylepage.css';
-import favorite from './favorite.js'
-import viewInfo from './App.js'
 
 
 
@@ -20,11 +18,11 @@ import viewInfo from './App.js'
 
 const Nav = (props) => {
 	return(
-		<nav class="nav-extended">
+		<nav className="nav-extended">
 			<div className = "nav-wrapper">
-				<a href="App.js" class="brand-logo" ><i class="material-icons"></i>  Movie finder </a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="#" onClick= {() => allStorage() } > Favorito </a></li>
+				<a href="App.js" className="brand-logo" ><i className="material-icons"></i>  Movie finder </a>
+				<ul id="nav-mobile" className="right hide-on-med-and-down">
+					<li><a href="/#" onClick= {() => allStorage() } > Favoritos </a></li>
       			</ul>
 			</div>
 		</nav>

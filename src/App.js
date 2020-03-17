@@ -4,7 +4,6 @@ import Searcher from './Searcher.js';
 import MovieList from './MovieList.js'
 import Pagination from './Pagination.js'
 import MovieInfo from './Movieinfo.js'
-import favoritos from './favoritos.js'
 
 class App extends Component {
   constructor(props){
@@ -49,7 +48,7 @@ class App extends Component {
 
  
   viewMovieInfo = (id) => {
-    const filteredMovie = this.state.movies.filter(movie => movie.id == id)
+    const filteredMovie = this.state.movies.filter(movie => movie.id === id)
     const newCurrentMovie = filteredMovie.length > 0 ? filteredMovie[0] : null 
     this.setState({currentMovie : newCurrentMovie}) 
 
