@@ -10,10 +10,9 @@ const Nav = (props) => {
 	return(
 		<nav className="nav-extended">
 			<div className = "nav-wrapper">
-				<a  href="/" className="brand-logo" >	<Link to = "/react-app-movie"><i className="material-icons"></i> </Link>Movie finder </a> 
+				<a  href="/#" className="brand-logo" ><i className="material-icons"></i> Movie finder </a> 
 				<ul id="nav-mobile" className="right hide-on-med-and-down" >
 					<Link to="/favoritos" ><li onClick={ props.closeMovieInfo } onClick={ props.clokMovieInfo } > Favoritos </li> </Link>
-
       			</ul>
 			</div>
 		</nav>
