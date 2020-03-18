@@ -4,6 +4,8 @@ import Searcher from './Searcher.js';
 import MovieList from './MovieList.js'
 import Pagination from './Pagination.js'
 import MovieInfo from './Movieinfo.js'
+import favoritos from './favoritos.js'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
   constructor(props){
@@ -14,7 +16,7 @@ class App extends Component {
       totalResults: 0,
       currentPage: 1 ,
       currentMovie: null,
-      currentFav: 1,
+      currentFav: 0
     }
 
   }
@@ -61,18 +63,25 @@ class App extends Component {
 
     const numberPages = Math.floor( this.state.totalResults /20);
   
+
   return (
+    <Router>
     <div>
       <div className="App">
         <Nav />
          { this.state.currentMovie == null ?   <div> <Searcher handleSubmit = {this.handleSubmit}  handleChange = {this.handleChange} />   < MovieList viewMovieInfo = {this.viewMovieInfo}  movies = {this.state.movies}  /> </div> :
          < MovieInfo  currentMovie = { this.state.currentMovie }  closeMovieInfo = { this.closeMovieInfo } /> }
-         { this.state.totalResults > 20  && this.state.currentMovie == null? < Pagination pages = {numberPages}  nextPage = {this.nextPage}  currentPage={this.state.currentPage} /> :'' }  
-         { this.state.currentFav == null ?    ' ' : '' }
+         { this.state.totalResults > 20  && this.state.currentMovie == null ? < Pagination pages = {numberPages}  nextPage = {this.nextPage}  currentPage={this.state.currentPage} /> :'' }  
+        <Route path="/favoritos"  component ={favoritos} />
       </div>       
     </div>
+    </Router>
+
+
   );
  }
 }
+
+
 
 export default App;

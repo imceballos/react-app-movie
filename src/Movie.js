@@ -1,6 +1,5 @@
 import React from 'react'
 import './stylo.css'
-
 const Movie = (props) => {
 
 	var words = ' '
@@ -17,7 +16,7 @@ const Movie = (props) => {
 
 	return (
 		<div className="col s12 m6 l3">
-			<div class="card">
+			<div className="card">
 				<div className= "card-image waves-effect waves-block waves-light">
 					{
 
@@ -27,7 +26,7 @@ const Movie = (props) => {
 				</div>	
 				<div className="card-content" >
 					<div className="info">
-						<p><font size="2"> { props.title } ( {words} )  </font> <a href=' ' onClick={() => props.viewMovieInfo(props.movieId)}> Detalles </a> </p>
+						<p><font size="2"> { props.title } ( {words} )  </font> <a href='/#' onClick={() => props.viewMovieInfo(props.movieId)}> Detalles </a> </p>
 					</div>	
 				</div>
 			</div>
