@@ -14,6 +14,8 @@ const Nav = (props) => {
 				<a  href="#" className="brand-logo" >	<Link to = "/"><i className="material-icons"></i> </Link>Movie finder </a> 
 				<ul id="nav-mobile" className="right hide-on-med-and-down" >
 					<Link to="/favoritos" ><li onClick={ props.closeMovieInfo }  > Favoritos </li> </Link>
+					<Link to="/favoritos" ><li onClick={ props.closeMovieInfo }  > Favoritos </li> </Link>
+
       			</ul>
 			</div>
 		</nav>
