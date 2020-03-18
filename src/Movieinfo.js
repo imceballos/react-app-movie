@@ -1,5 +1,6 @@
 import React from 'react'
 import './stylepage.css'
+import {Link} from 'react-router-dom';
 
 function save_as(props){
 
@@ -35,7 +36,7 @@ const MovieInfo = (props) => {
 							<p>	Votos : {props.currentMovie.vote_count}</p>
 							<p>	Popularidad : {props.currentMovie.popularity}</p>
 							<p>	Nota: {props.currentMovie.vote_average}</p>
-							<a href="/#" onClick={() => save_as(props)}> Añadir a favoritos </a>
+							<Link to ="#"><a href="# " onClick={() => save_as(props)}> Añadir a favoritos </a></Link>
 						</div>
 					</div>
 					

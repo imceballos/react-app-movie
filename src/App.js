@@ -6,7 +6,8 @@ import Pagination from './Pagination.js'
 import MovieInfo from './Movieinfo.js'
 import favoritos from './favoritos.js'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-
+import "./stylepage.css"
+import "./stylo.css"
 class App extends Component {
   constructor(props){
     super(props)
@@ -69,7 +70,9 @@ class App extends Component {
     <div>
       <div className="App">
         <Nav />
-         { this.state.currentMovie == null ?   <div> <Searcher handleSubmit = {this.handleSubmit}  handleChange = {this.handleChange} />   < MovieList viewMovieInfo = {this.viewMovieInfo}  movies = {this.state.movies}  /> </div> :
+         { this.state.totalResults == 0  ?  <div className="noresults"> < h6> No hay resultados </h6> </div> : <div className="noresults"> <h6> Resultados: {this.state.totalResults} </h6> </div> }
+
+         { this.state.currentMovie == null ?  <div> <Searcher handleSubmit = {this.handleSubmit}  handleChange = {this.handleChange} />   < MovieList viewMovieInfo = {this.viewMovieInfo}  movies = {this.state.movies}  /> </div> :
          < MovieInfo  currentMovie = { this.state.currentMovie }  closeMovieInfo = { this.closeMovieInfo } /> }
          { this.state.totalResults > 20  && this.state.currentMovie == null ? < Pagination pages = {numberPages}  nextPage = {this.nextPage}  currentPage={this.state.currentPage} /> :'' }  
         <Route path="/favoritos"  component ={favoritos} />
