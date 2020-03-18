@@ -20,7 +20,19 @@
 }
 
 
+.noresults{
+	position: relative;
+	padding-left: 200px;
+	font-family: "Comic Sans MS";
+}
+
+.info-container{
+	font-family: "Comic Sans MS";
 
 
+}
 
+.titlemovie_s{
+	font-family: 'Lucida Sans', Arial, sans-serif; font-size: 40px; 
+}
 
