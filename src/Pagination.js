@@ -7,6 +7,7 @@ const Pagination = (props) => {
 		let active = props.currentPage === i ? 'active' : '';
 		if (Math.abs(props.currentPage - i) < 4) {  
 		pageLinks.push(<li className={'waves-effect '+ active} key={i}	onClick={() => props.nextPage(i)} > <a href="#">{i} </a> </li>) }
+
 	}
 
 	return(
