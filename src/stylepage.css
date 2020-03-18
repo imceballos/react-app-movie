@@ -22,7 +22,8 @@
 
 .noresults{
 	position: relative;
-	padding-left: 200px;
+	left: 600px;
+	top: 100px;
 	font-family: "Comic Sans MS";
 }
 
