@@ -20,7 +20,7 @@ const Nav = (props) => {
 	return(
 		<nav className="nav-extended">
 			<div className = "nav-wrapper">
-				<a href="App.js" className="brand-logo" ><i className="material-icons"></i>  Movie finder </a>
+				<a href="https://imceballos.github.io/react-app-movie/" className="brand-logo" ><i className="material-icons"></i>  Movie finder </a>
 				<ul id="nav-mobile" className="right hide-on-med-and-down">
 					<li><a href="/favoritos" onClick= {() => allStorage() } > Favoritos </a></li>
       			</ul>
