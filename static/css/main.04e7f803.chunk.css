@@ -1,0 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500&display=swap" rel="stylesheet")
+
+*{margin:0;padding:0;font-family:"Roboto",sans-serif}.number{position:relative;width:300px;height:300px;display:flex;justify-content:center;align-items:center;flex-direction:column;background:#fff}.noresults{position:relative;padding-left:200px}.info-container,.noresults{font-family:"Comic Sans MS"}.titlemovie_s{font-family:"Lucida Sans",Arial,sans-serif;font-size:40px}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}code{font-family:source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace}.card{display:inline-block;width:220px;height:320px;margin:10 0}.nav-wrapper{background:#494f52}
+/*# sourceMappingURL=main.04e7f803.chunk.css.map */
