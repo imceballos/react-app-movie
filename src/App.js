@@ -6,7 +6,6 @@ import Pagination from './Pagination.js'
 import MovieInfo from './Movieinfo.js'
 import favoritos from './favoritos.js'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import './stylepage.css';
 
 class App extends Component {
   constructor(props){
@@ -14,7 +13,7 @@ class App extends Component {
     this.state = {
       movies : [],
       searchTerm: '',
-      totalResults: 1,
+      totalResults: 0,
       currentPage: 1 ,
       currentMovie: null,
       currentFav: 0
@@ -60,36 +59,20 @@ class App extends Component {
     this.setState({currentMovie: null})
   }
 
- 
-
-
-
   render() {
 
     const numberPages = Math.floor( this.state.totalResults /20);
   
-  const Buscador = (props) =>{
-    return(
-       this.state.totalResults > 20  && this.state.currentMovie == null ? < Pagination pages = {numberPages}  nextPage = {this.nextPage}  currentPage={this.state.currentPage} /> :'' 
-
-
-      )
-
-  }
-
-
 
   return (
     <Router>
     <div>
       <div className="App">
         <Nav />
-        {this.state.totalResults > 1 ?  <h8 className="noresults"  >Resultados:{ this.state.totalResults} </h8> : <div><h8 className="noresults"  >No hay resultados :( </h8> </div>}
-         { this.state.currentMovie == null  ?   <div> <  Searcher handleSubmit = {this.handleSubmit}  handleChange = {this.handleChange}  />   < MovieList viewMovieInfo = {this.viewMovieInfo}  movies = {this.state.movies}  /> </div> :
+         { this.state.currentMovie == null ?   <div> <Searcher handleSubmit = {this.handleSubmit}  handleChange = {this.handleChange} />   < MovieList viewMovieInfo = {this.viewMovieInfo}  movies = {this.state.movies}  /> </div> :
          < MovieInfo  currentMovie = { this.state.currentMovie }  closeMovieInfo = { this.closeMovieInfo } /> }
-         <Buscador />
-        <Route exact path="/favoritos"  component ={favoritos} /> 
-
+         { this.state.totalResults > 20  && this.state.currentMovie == null ? < Pagination pages = {numberPages}  nextPage = {this.nextPage}  currentPage={this.state.currentPage} /> :'' }  
+        <Route path="/favoritos"  component ={favoritos} />
       </div>       
     </div>
     </Router>

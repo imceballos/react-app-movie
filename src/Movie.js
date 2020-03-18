@@ -1,7 +1,5 @@
 import React from 'react'
 import './stylo.css'
-import {Link} from 'react-router-dom';
-
 const Movie = (props) => {
 
 	var words = ' '
@@ -28,7 +26,7 @@ const Movie = (props) => {
 				</div>	
 				<div className="card-content" >
 					<div className="info">
-						<p><font size="2"> { props.title.substr(0,27) }({words})  </font> <Link to="/ "><a href='/#' onClick={() => props.viewMovieInfo(props.movieId)}> Detalles </a> </Link> </p>
+						<p><font size="2"> { props.title } ( {words} )  </font> <a href='/#' onClick={() => props.viewMovieInfo(props.movieId)}> Detalles </a> </p>
 					</div>	
 				</div>
 			</div>

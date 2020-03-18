@@ -15,9 +15,6 @@ function favoritos( ) {
 
 	return(
 		 <ul>
-		 		<h4 align="center">Favoritos</h4>
-
-		 
                 {values.map(
                 	s => { var valores = JSON.parse(s) ;  
 

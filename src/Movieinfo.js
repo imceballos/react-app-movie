@@ -1,6 +1,5 @@
 import React from 'react'
 import './stylepage.css'
-import {Link} from 'react-router-dom';
 
 function save_as(props){
 
@@ -17,7 +16,7 @@ const MovieInfo = (props) => {
 		<div className = "container">
 			<div className = "row" onClick={props.closeMovieInfo} style={{cursor : "pointer", paddingTop : 50}}>
 				<i className = "fas fa-arrow-left"> </i>
-				<Link to="/ "> <span style={{marginLeft: 10}} > Go back </span> </Link>
+				<span style={{marginLeft: 10}} > Go back </span>
 			</div>
 			<div className="row">
 				<div className="col s12 m4">
@@ -30,7 +29,7 @@ const MovieInfo = (props) => {
 				</div>
 					<div className="col s12 m8">
 						<div className="info-container">
-							<p className="titlemovie_s"> {props.currentMovie.title} </p>
+							<p> {props.currentMovie.title} </p>
 							<p> {props.currentMovie.release_date}</p>
 							<p> {props.currentMovie.overview} </p>
 							<p>	Votos : {props.currentMovie.vote_count}</p>
