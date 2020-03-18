@@ -70,7 +70,7 @@ class App extends Component {
     <div>
       <div className="App">
         <Nav />
-         { this.state.totalResults == 0  ?  <div className="noresults"> < h6> No hay resultados </h6> </div> : <div className="noresults"> <h6> Resultados: {this.state.totalResults} </h6> </div> }
+         { this.state.totalResults == 0  ?  <div className="noresults"> < h8> No hay resultados </h8> </div> : <div className="noresults"> <h8> Resultados: {this.state.totalResults} </h8> </div> }
 
          { this.state.currentMovie == null ?  <div> <Searcher handleSubmit = {this.handleSubmit}  handleChange = {this.handleChange} />   < MovieList viewMovieInfo = {this.viewMovieInfo}  movies = {this.state.movies}  /> </div> :
          < MovieInfo  currentMovie = { this.state.currentMovie }  closeMovieInfo = { this.closeMovieInfo } /> }
